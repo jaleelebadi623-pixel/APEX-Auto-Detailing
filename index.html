@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Auto Detail & Can Cleaning | Premium Mobile Services</title>
+    <style>
+        /* Color Palette & Base Styles */
+        :root {
+            --bg-main: #0f172a;       /* Deep midnight slate */
+            --bg-card: #1e293b;       /* Card background */
+            --accent-blue: #38bdf8;   /* Electric sky blue */
+            --accent-green: #10b981;  /* Fresh mint green for trash can section */
+            --accent-gold: #fbbf24;   /* Gold for premium tier */
+            --text-light: #f8fafc;    /* Clean white */
+            --text-muted: #94a3b8;    /* Muted gray */
+            --discount-red: #ef4444;  /* Cross-out color */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Enables the smooth gliding animation */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 100px; 
+        }
+
+        /* MASSIVE HUGE SALE BANNER */
+        .huge-sale-banner {
+            background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-bottom: 5px solid #7f1d1d;
+        }
+
+        /* Hero Header Section */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 3px solid var(--accent-blue);
+        }
+
+        .brand-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .brand-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .brand-tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .section-title.green-title {
+            color: var(--accent-green);
+            margin-top: 50px;
+        }
+
+        /* Service Cards Layout */
+        .service-card {
+            background-color: var(--bg-card);
+            border-left: 5px solid var(--accent-blue);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card.premium {
+            border-left-color: var(--accent-gold);
+            background: linear-gradient(90deg, #1e293b 0%, #1e2e4a 100%);
+        }
+
+        .service-card.trash-can {
+            border-left-color: var(--accent-green);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .service-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .service-card.premium .service-name {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .service-name {
+            color: var(--accent-green);
+        }
+
+        .price-container {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .crossed-out-price {
+            font-size: 1.1rem;
+            color: var(--discount-red);
+            text-decoration: line-through;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .service-price {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--accent-blue);
+        }
+
+        .service-card.premium .service-price {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .service-price {
+            color: var(--accent-green);
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        .service-card.premium .feature-item::before {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .feature-item::before {
+            color: var(--accent-green);
+        }
+
+        /* Add-ons Box Section */
+        .addons-container {
+            margin-top: 40px;
+            background-color: #111827;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .addons-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .addon-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            align-items: center;
+        }
+
+        .addon-name {
+            color: #cbd5e1;
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .addon-crossed-out {
+            color: var(--discount-red);
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        /* Call To Action Buttons```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Auto Detail & Can Cleaning | Premium Mobile Services</title>
+    <style>
+        /* Color Palette & Base Styles */
+        :root {
+            --bg-main: #0f172a;       /* Deep midnight slate */
+            --bg-card: #1e293b;       /* Card background */
+            --accent-blue: #38bdf8;   /* Electric sky blue */
+            --accent-green: #10b981;  /* Fresh mint green for trash can section */
+            --accent-gold: #fbbf24;   /* Gold for premium tier */
+            --text-light: #f8fafc;    /* Clean white */
+            --text-muted: #94a3b8;    /* Muted gray */
+            --discount-red: #ef4444;  /* Cross-out color */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Enables the smooth gliding animation */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 100px; 
+        }
+
+        /* MASSIVE HUGE SALE BANNER */
+        .huge-sale-banner {
+            background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-bottom: 5px solid #7f1d1d;
+        }
+
+        /* Hero Header Section */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 3px solid var(--accent-blue);
+        }
+
+        .brand-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .brand-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .brand-tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .section-title.green-title {
+            color: var(--accent-green);
+            margin-top: 50px;
+        }
+
+        /* Service Cards Layout */
+        .service-card {
+            background-color: var(--bg-card);
+            border-left: 5px solid var(--accent-blue);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card.premium {
+            border-left-color: var(--accent-gold);
+            background: linear-gradient(90deg, #1e293b 0%, #1e2e4a 100%);
+        }
+
+        .service-card.trash-can {
+            border-left-color: var(--accent-green);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .service-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .service-card.premium .service-name {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .service-name {
+            color: var(--accent-green);
+        }
+
+        .price-container {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .crossed-out-price {
+            font-size: 1.1rem;
+            color: var(--discount-red);
+            text-decoration: line-through;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .service-price {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--accent-blue);
+        }
+
+        .service-card.premium .service-price {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .service-price {
+            color: var(--accent-green);
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        .service-card.premium .feature-item::before {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .feature-item::before {
+            color: var(--accent-green);
+        }
+
+        /* Add-ons Box Section */
+        .addons-container {
+            margin-top: 40px;
+            background-color: #111827;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .addons-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .addon-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            align-items: center;
+        }
+
+        .addon-name {
+            color: #cbd5e1;
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .addon-crossed-out {
+            color: var(--discount-red);
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        /* Call To Action Buttons */
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .btn-book {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+            cursor: pointer;
+        }
+
+        .btn-book:hover {
+            transform: translateY(-2px);
+            background-color: #7dd3fc;
+        }
+
+        /* Advanced Booking Form Section */
+        .booking-form-container {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #7dd3fc;
+        }
+
+        /* Sticky Footer Contact Bar */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #0b0f19;
+            border-top: 1px solid #1e293b;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            z-index: 100;
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info span {
+            white-space: nowrap;
+        }
+
+        .footer-info strong {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 600px) {
+            .huge-sale-banner { font-size: 1.2rem; letter-spacing: 1px; }
+            .brand-title { font-size: 2rem; }
+            .service-header { flex-direction: column; align-items: flex-start; gap: 0; }
+            .price-container { text-align: left; margin-top: 5px; gap: 10px; }
+            .service-price { font-size: 1.4rem; }
+            .footer-info { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="huge-sale-banner">
+        50 PERCENT SALE! (THIS WEEK ONLY)
+    </div>
+
+    <header>
+        <div class="brand-subtitle">Premium Mobile Detailing & Pressure Washing</div>
+        <div class="brand-title">Apex Auto Detail</div>
+        <div class="brand-tagline">Bringing Peak Cleanliness Directly To Your Doorstep</div>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Auto Detailing Packages (7-Day Promo Rates)</h2>
+
+        <div class="service-card">
+            <div class="service-header">
+                <span class="service-name">Showroom Exterior Detail</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$120</span>
+                    <span class="service-price">$60+</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">Premium foam bath hand wash & microfiber dry</li>
+                <li class="feature-item">Deep wheel, barrel, and tire cleaning + tire dressing</li>
+                <li class="feature-item">Exterior window streak-free clarity cleaning</li>
+                <li class="feature-item">High-gloss spray sealant protection (up to 3 months protection)</li>
+                <li class="feature-item">Door jambs wiped down and cleared</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="service-header">
+                <span class="service-name">Pristine Interior Detail</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$140</span>
+                    <span class="service-price">$70+</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">Deep vacuuming of all carpets, floor mats, and seats</li>
+                <li class="feature-item">Meticulous wipe down of dash, console, and door panels</li>
+                <li class="feature-item">UV protective coating applied to all hard interior surfaces</li>
+                <li class="feature-item">Interior glass and mirror streak-free cleaning</li>
+                <li class="feature-item">Light stain spot treatment & pet hair removal</li>
+            </ul>
+        </div>
+
+        <div class="service-card premium">
+            <div class="service-header">
+                <span class="service-name">The Executive Full Detail</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$240</span>
+                    <span class="service-price">$120+</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">Includes EVERYTHING from both Exterior & Interior packages</li>
+                <li class="feature-item">Clay bar paint decontamination treatment for ultra-smooth finish</li>
+                <li class="feature-item">Premium wax/ceramic sealant upgrade (up to 6 months protection)</li>
+                <li class="feature-item">Full interior shampooing of carpet mats & upholstery conditioning</li>
+                <li class="feature-item">Dashboard and center console deep detailing & crevice cleaning</li>
+            </ul>
+        </div>
+
+
+        <h2 class="section-title green-title">Trash Can Sanitizing Services (7-Day Promo Rates)</h2>
+
+        <div class="service-card trash-can">
+            <div class="service-header">
+                <span class="service-name">Blaster Trash Can Clean (2 Cans)</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$30</span>
+                    <span class="service-price">$15</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">High-pressure 1000 PSI deep internal blast to remove grime</li>
+                <li class="feature-item">Complete chemical disinfection & premium deodorizing spray (Stink Free!)</li>
+                <li class="feature-item">Exterior handle and lid scrub down and sanitized</li>
+                <li class="feature-item">Pricing covers **2 heavy-duty cans** ($10 per extra can)</li>
+            </ul>
+        </div>
+
+
+        <div class="addons-container">
+            <div class="addons-title">Optional Add-Ons (50% Off This Week)</div>
+            <div class="addon-row">
+                <span class="addon-name">Headlight Restoration (Pair)</span>
+                <div>
+                    <span class="addon-crossed-out">$60</span>
+                    <span class="addon-price">$30</span>
+                </div>
+            </div>
+            <div class="addon-row">
+                <span class="addon-name">Engine Bay Deep Clean & Dressing</span>
+                <div>
+                    <span class="addon-crossed-out">$50</span>
+                    <span class="addon-price">$25</span>
+                </div>
+            </div>
+            <div class="addon-row">
+                <span class="addon-name">Add 1 Extra Trash Can to any service</span>
+                <div>
+                    <span class="addon-crossed-out">$20</span>
+                    <span class="addon-price">$10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="#booking-section" class="btn-book">Book An Appointment</a>
+        </div>
+
+        <div id="booking-section" class="booking-form-container">
+            <h3 class="section-title" style="margin-bottom: 20px; text-align: left;">Request a Booking</h3>
+            
+            <form action="[https://formspree.io/f/maqzdbwg](https://formspree.io/f/maqzdbwg)" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., (555) 555-5555" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle">Vehicle details OR Address (For Trash Can Clean)</label>
+                    <input type="text" id="vehicle" name="location_or_vehicle" placeholder="e.g., 2023 Honda Civic OR 123 Neighborhood Lane" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="package">Select Service Package (Promo Rates)</label>
+                    <select id="package" name="package">
+                        <option value="Executive Full Detail ($120 Promo)">The Executive Full Auto Detail — $120</option>
+                        <option value="Exterior Only ($60 Promo)">Showroom Exterior Auto Detail — $60</option>
+                        <option value="Interior Only ($70 Promo)">Pristine Interior Auto Detail — $70</option>
+                        <option value="Trash Can Sanitizing Only ($15 Promo)">Trash Can Blaster Clean (2 Cans) — $15</option>
+                        <option value="Full Detail + Trash Can Bundle ($135 Promo)">The Executive Auto Detail + 2 Trash Cans — $135</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes or Add-ons</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Let us know if you want add-ons (Headlights, Extra Cans) or have specific timing requests..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <span>📱 Call or Text: <strong>(720) 526-4807</strong></span>
+            <span>✉️ Email: <strong>jaleelebadi623@gmail.com</strong></span>
+        </div>
+    </footer>
+
+</body>
+</html>
+``````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Auto Detail & Can Cleaning | Premium Mobile Services</title>
+    <style>
+        /* Color Palette & Base Styles */
+        :root {
+            --bg-main: #0f172a;       /* Deep midnight slate */
+            --bg-card: #1e293b;       /* Card background */
+            --accent-blue: #38bdf8;   /* Electric sky blue */
+            --accent-green: #10b981;  /* Fresh mint green for trash can section */
+            --accent-gold: #fbbf24;   /* Gold for premium tier */
+            --text-light: #f8fafc;    /* Clean white */
+            --text-muted: #94a3b8;    /* Muted gray */
+            --discount-red: #ef4444;  /* Cross-out color */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Enables the smooth gliding animation */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 100px; 
+        }
+
+        /* MASSIVE HUGE SALE BANNER */
+        .huge-sale-banner {
+            background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-bottom: 5px solid #7f1d1d;
+        }
+
+        /* Hero Header Section */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 3px solid var(--accent-blue);
+        }
+
+        .brand-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .brand-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .brand-tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .section-title.green-title {
+            color: var(--accent-green);
+            margin-top: 50px;
+        }
+
+        /* Service Cards Layout */
+        .service-card {
+            background-color: var(--bg-card);
+            border-left: 5px solid var(--accent-blue);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card.premium {
+            border-left-color: var(--accent-gold);
+            background: linear-gradient(90deg, #1e293b 0%, #1e2e4a 100%);
+        }
+
+        .service-card.trash-can {
+            border-left-color: var(--accent-green);
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .service-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .service-card.premium .service-name {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .service-name {
+            color: var(--accent-green);
+        }
+
+        .price-container {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .crossed-out-price {
+            font-size: 1.1rem;
+            color: var(--discount-red);
+            text-decoration: line-through;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .service-price {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--accent-blue);
+        }
+
+        .service-card.premium .service-price {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .service-price {
+            color: var(--accent-green);
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        .service-card.premium .feature-item::before {
+            color: var(--accent-gold);
+        }
+
+        .service-card.trash-can .feature-item::before {
+            color: var(--accent-green);
+        }
+
+        /* Add-ons Box Section */
+        .addons-container {
+            margin-top: 40px;
+            background-color: #111827;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .addons-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .addon-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            align-items: center;
+        }
+
+        .addon-name {
+            color: #cbd5e1;
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .addon-crossed-out {
+            color: var(--discount-red);
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        /* Call To Action Buttons */
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .btn-book {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+            cursor: pointer;
+        }
+
+        .btn-book:hover {
+            transform: translateY(-2px);
+            background-color: #7dd3fc;
+        }
+
+        /* Advanced Booking Form Section */
+        .booking-form-container {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #7dd3fc;
+        }
+
+        /* Sticky Footer Contact Bar */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #0b0f19;
+            border-top: 1px solid #1e293b;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            z-index: 100;
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info span {
+            white-space: nowrap;
+        }
+
+        .footer-info strong {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 600px) {
+            .huge-sale-banner { font-size: 1.2rem; letter-spacing: 1px; }
+            .brand-title { font-size: 2rem; }
+            .service-header { flex-direction: column; align-items: flex-start; gap: 0; }
+            .price-container { text-align: left; margin-top: 5px; gap: 10px; }
+            .service-price { font-size: 1.4rem; }
+            .footer-info { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="huge-sale-banner">
+        50 PERCENT SALE! (THIS WEEK ONLY)
+    </div>
+
+    <header>
+        <div class="brand-subtitle">Premium Mobile Detailing & Pressure Washing</div>
+        <div class="brand-title">Apex Auto Detail</div>
+        <div class="brand-tagline">Bringing Peak Cleanliness Directly To Your Doorstep</div>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">Auto Detailing Packages (7-Day Promo Rates)</h2>
+
+        <div class="service-card">
+            <div class="service-header">
+                <span class="service-name">Showroom Exterior Detail</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$120</span>
+                    <span class="service-price">$60+</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">Premium foam bath hand wash & microfiber dry</li>
+                <li class="feature-item">Deep wheel, barrel, and tire cleaning + tire dressing</li>
+                <li class="feature-item">Exterior window streak-free clarity cleaning</li>
+                <li class="feature-item">High-gloss spray sealant protection (up to 3 months protection)</li>
+                <li class="feature-item">Door jambs wiped down and cleared</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="service-header">
+                <span class="service-name">Pristine Interior Detail</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$140</span>
+                    <span class="service-price">$70+</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">Deep vacuuming of all carpets, floor mats, and seats</li>
+                <li class="feature-item">Meticulous wipe down of dash, console, and door panels</li>
+                <li class="feature-item">UV protective coating applied to all hard interior surfaces</li>
+                <li class="feature-item">Interior glass and mirror streak-free cleaning</li>
+                <li class="feature-item">Light stain spot treatment & pet hair removal</li>
+            </ul>
+        </div>
+
+        <div class="service-card premium">
+            <div class="service-header">
+                <span class="service-name">The Executive Full Detail</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$240</span>
+                    <span class="service-price">$120+</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">Includes EVERYTHING from both Exterior & Interior packages</li>
+                <li class="feature-item">Clay bar paint decontamination treatment for ultra-smooth finish</li>
+                <li class="feature-item">Premium wax/ceramic sealant upgrade (up to 6 months protection)</li>
+                <li class="feature-item">Full interior shampooing of carpet mats & upholstery conditioning</li>
+                <li class="feature-item">Dashboard and center console deep detailing & crevice cleaning</li>
+            </ul>
+        </div>
+
+
+        <h2 class="section-title green-title">Trash Can Sanitizing Services (7-Day Promo Rates)</h2>
+
+        <div class="service-card trash-can">
+            <div class="service-header">
+                <span class="service-name">Blaster Trash Can Clean (2 Cans)</span>
+                <div class="price-container">
+                    <span class="crossed-out-price">$30</span>
+                    <span class="service-price">$15</span>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li class="feature-item">High-pressure 1000 PSI deep internal blast to remove grime</li>
+                <li class="feature-item">Complete chemical disinfection & premium deodorizing spray (Stink Free!)</li>
+                <li class="feature-item">Exterior handle and lid scrub down and sanitized</li>
+                <li class="feature-item">Pricing covers **2 heavy-duty cans** ($10 per extra can)</li>
+            </ul>
+        </div>
+
+
+        <div class="addons-container">
+            <div class="addons-title">Optional Add-Ons (50% Off This Week)</div>
+            <div class="addon-row">
+                <span class="addon-name">Headlight Restoration (Pair)</span>
+                <div>
+                    <span class="addon-crossed-out">$60</span>
+                    <span class="addon-price">$30</span>
+                </div>
+            </div>
+            <div class="addon-row">
+                <span class="addon-name">Engine Bay Deep Clean & Dressing</span>
+                <div>
+                    <span class="addon-crossed-out">$50</span>
+                    <span class="addon-price">$25</span>
+                </div>
+            </div>
+            <div class="addon-row">
+                <span class="addon-name">Add 1 Extra Trash Can to any service</span>
+                <div>
+                    <span class="addon-crossed-out">$20</span>
+                    <span class="addon-price">$10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="#booking-section" class="btn-book">Book An Appointment</a>
+        </div>
+
+        <div id="booking-section" class="booking-form-container">
+            <h3 class="section-title" style="margin-bottom: 20px; text-align: left;">Request a Booking</h3>
+            
+            <form action="[https://formspree.io/f/maqzdbwg](https://formspree.io/f/maqzdbwg)" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., (555) 555-5555" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle">Vehicle details OR Address (For Trash Can Clean)</label>
+                    <input type="text" id="vehicle" name="location_or_vehicle" placeholder="e.g., 2023 Honda Civic OR 123 Neighborhood Lane" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="package">Select Service Package (Promo Rates)</label>
+                    <select id="package" name="package">
+                        <option value="Executive Full Detail ($120 Promo)">The Executive Full Auto Detail — $120</option>
+                        <option value="Exterior Only ($60 Promo)">Showroom Exterior Auto Detail — $60</option>
+                        <option value="Interior Only ($70 Promo)">Pristine Interior Auto Detail — $70</option>
+                        <option value="Trash Can Sanitizing Only ($15 Promo)">Trash Can Blaster Clean (2 Cans) — $15</option>
+                        <option value="Full Detail + Trash Can Bundle ($135 Promo)">The Executive Auto Detail + 2 Trash Cans — $135</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes or Add-ons</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Let us know if you want add-ons (Headlights, Extra Cans) or have specific timing requests..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <span>📱 Call or Text: <strong>(720) 526-4807</strong></span>
+            <span>✉️ Email: <strong>jaleelebadi623@gmail.com</strong></span>
+        </div>
+    </footer>
+
+</body>
+</html>
